@@ -151,7 +151,7 @@ export const mockResumeAnalysis: ResumeAnalysis = {
 
 export const mockJobRequirementAnalysis: JobRequirementAnalysis = {
   id: 'mock-job-requirement-analysis-bilibili-ai-native-frontend',
-  jobOpportunityId: mockJobOpportunityId,
+  opportunityId: mockJobOpportunityId,
   company: 'Bilibili',
   jobTitle: 'AI Native开发工程师（前端方向）',
   address: ['上海'],
@@ -294,7 +294,7 @@ export const mockJobRequirementAnalysis: JobRequirementAnalysis = {
 
 export const mockJobAnalysis: JobAnalysis = {
   id: 'mock-job-analysis-bilibili-ai-native-frontend-resume-v1',
-  jobOpportunityId: mockJobOpportunityId,
+  opportunityId: mockJobOpportunityId,
   resumeId: mockResumeIdentity.resumeId,
   resumeVersionId: mockResumeIdentity.resumeVersionId,
   matchScore: 78,
@@ -524,14 +524,14 @@ export const mockJobAnalysis: JobAnalysis = {
 }
 
 export function createMockJobAnalysis(params: {
-  jobOpportunityId: string
+  opportunityId: string
   resumeId: string
   resumeVersionId: string
 }): JobAnalysis {
   return {
     ...mockJobAnalysis,
     id: crypto.randomUUID(),
-    jobOpportunityId: params.jobOpportunityId,
+    opportunityId: params.opportunityId,
     resumeId: params.resumeId,
     resumeVersionId: params.resumeVersionId,
     createdAt: new Date().toISOString(),
